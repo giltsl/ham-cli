@@ -34,7 +34,7 @@ android {
         release.setRoot('build-types/release')
     }
     //}
-    compileSdkVersion 'Google Inc.:Google APIs:19'
+//    compileSdkVersion 'Google Inc.:Google APIs:19'
     buildToolsVersion '19.1.0'
 
     buildTypes {
