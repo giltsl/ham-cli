@@ -4,6 +4,5 @@
 #     - build-tools-19.1.0
 #     - android-19
 
-deploy:
-  provider: heroku
-  api_key: "YOUR API KEY"
+script:
+  - bash -c ls
