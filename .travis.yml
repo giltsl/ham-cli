@@ -1,5 +1,5 @@
 script:
-- ls
+  - ls
   - echo hello
   - git clone -b test https://github.com/giltsl/travis-test.git
   - cd travis-test
