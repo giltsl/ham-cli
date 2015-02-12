@@ -11,9 +11,11 @@ script:
   - cd ..
   - ls
   
+local: true
+    
 deploy:
   provider: testfairy
-  local: true
+
   platform: "android"
   api-key: "5f8d490c554f63cf7784174bcdcb3c87f2447709"
   apk: "out/ham.apk"
