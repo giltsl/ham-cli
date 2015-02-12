@@ -1,8 +1,21 @@
-# language: android
-# android:
-#   components:
-#     - build-tools-19.1.0
-#     - android-19
-
 script:
-  - bash -c ls
+  - echo hello
+  - git clone -b test https://github.com/giltsl/travis-test.git
+  - cd travis-test
+  - gem build dpl.gemspec
+  - rvm 2.2 do ruby -S gem install dpl-*.gem
+  - cp *.gem ..
+  - cd ..
+  
+  deploy:
+  provider: testfairy
+  local: true
+  platform: "android"
+  api-key: "5f8d490c554f63cf7784174bcdcb3c87f2447709"
+  apk: "out/ham.apk"
+  proguard-file: "proguard file name"
+  keystore-file: "app/debug.keystore"
+  storepass: "android"
+  alias: "androiddebugkey"
+  on:
+    all_branches: true
